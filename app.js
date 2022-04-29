@@ -17,12 +17,8 @@ form.addEventListener('submit', event=>{
     scrollTo(0,0);
     
     timer(score,count);
-    clearRadio();    
+    form.reset();
 });
-function clearRadio(){
-        let radio = document.querySelectorAll('input[type=radio]:checked');
-        radio.forEach(radio=> radio.checked=false);
-}
 function timer(score,count){
     const timer=setInterval(()=>{
         result.textContent=`${count}%`;
